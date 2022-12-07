@@ -1,0 +1,559 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production/Lamp.X.production.o
+cinit CODE 0 13 13 14 2 1
+idloc IDLOC 5 2000 2000 4 2 1
+text1 CODE 0 1AF 1AF 27 2 1
+text2 CODE 0 15D 15D 29 2 1
+text3 CODE 0 186 186 29 2 1
+text4 CODE 0 2A8 2A8 6 2 1
+text5 CODE 0 2AE 2AE 6 2 1
+text6 CODE 0 2B8 2B8 2 2 1
+text7 CODE 0 26A 26A D 2 1
+text8 CODE 0 256 256 14 2 1
+text9 CODE 0 1D6 1D6 23 2 1
+text10 CODE 0 277 277 D 2 1
+text11 CODE 0 23F 23F 17 2 1
+text12 CODE 0 1F9 1F9 23 2 1
+text13 CODE 0 21C 21C 23 2 1
+text14 CODE 0 E4 E4 79 2 1
+text15 CODE 0 2B4 2B4 4 2 1
+text16 CODE 0 28C 28C 7 2 1
+text17 CODE 0 293 293 7 2 1
+text18 CODE 0 29A 29A 7 2 1
+text19 CODE 0 2A1 2A1 7 2 1
+text20 CODE 0 2BA 2BA 2 2 1
+idataCOMMON CODE 0 2BC 2BC 1 2 1
+maintext CODE 0 36 36 AE 2 1
+cstackCOMMON COMMON 1 70 70 C 1 1
+cstackBANK0 BANK0 1 4E 4E F 1 1
+intentry CODE 0 4 4 C 2 1
+bssBANK0 BANK0 1 20 20 2E 1 1
+dataCOMMON COMMON 1 7D 7D 1 1 1
+functab ENTRY 0 27 27 F 2 1
+clrtext CODE 0 284 284 8 2 1
+bssCOMMON COMMON 1 7C 7C 1 1 1
+config CONFIG 4 2007 2007 2 2 1
+$/tmp/xcXepBDDg.o
+idloc IDLOC 5 2000 2000 4 2 1
+reset_vec CODE 0 0 0 3 2 1
+end_init CODE 0 10 10 3 2 1
+config CONFIG 4 2007 2007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 5D-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 5D-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-3 2
+CONST 2BD-1FFF 2
+ENTRY 3-3 2
+ENTRY 2BD-1FFF 2
+CODE 3-3 2
+CODE 2BD-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 3-3 2
+STRCODE 2BD-1FFF 2
+STRING 3-3 2
+STRING 2BD-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/Lamp.X.production.o
+13 cinit CODE >1082:/tmp/xcXCICpdD.s
+13 cinit CODE >1085:/tmp/xcXCICpdD.s
+13 cinit CODE >1120:/tmp/xcXCICpdD.s
+18 cinit CODE >1121:/tmp/xcXCICpdD.s
+19 cinit CODE >1140:/tmp/xcXCICpdD.s
+1A cinit CODE >1141:/tmp/xcXCICpdD.s
+1B cinit CODE >1142:/tmp/xcXCICpdD.s
+1C cinit CODE >1143:/tmp/xcXCICpdD.s
+1D cinit CODE >1144:/tmp/xcXCICpdD.s
+22 cinit CODE >1147:/tmp/xcXCICpdD.s
+23 cinit CODE >1153:/tmp/xcXCICpdD.s
+23 cinit CODE >1155:/tmp/xcXCICpdD.s
+24 cinit CODE >1156:/tmp/xcXCICpdD.s
+27 functab ENTRY >3580:/tmp/xcXCICpdD.s
+27 functab ENTRY >3582:/tmp/xcXCICpdD.s
+27 functab ENTRY >3583:/tmp/xcXCICpdD.s
+27 functab ENTRY >3584:/tmp/xcXCICpdD.s
+28 functab ENTRY >3585:/tmp/xcXCICpdD.s
+29 functab ENTRY >3586:/tmp/xcXCICpdD.s
+2A functab ENTRY >3587:/tmp/xcXCICpdD.s
+2B functab ENTRY >3588:/tmp/xcXCICpdD.s
+2C functab ENTRY >3590:/tmp/xcXCICpdD.s
+2C functab ENTRY >3591:/tmp/xcXCICpdD.s
+2D functab ENTRY >3594:/tmp/xcXCICpdD.s
+2D functab ENTRY >3595:/tmp/xcXCICpdD.s
+30 functab ENTRY >3598:/tmp/xcXCICpdD.s
+30 functab ENTRY >3599:/tmp/xcXCICpdD.s
+33 functab ENTRY >3602:/tmp/xcXCICpdD.s
+33 functab ENTRY >3603:/tmp/xcXCICpdD.s
+4 intentry CODE >17:/home/tremon/MPLABXProjects/Lamp.X/main.c
+2BA text20 CODE >18:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2BA text20 CODE >19:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2BB text20 CODE >20:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2A1 text19 CODE >27:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2A1 text19 CODE >28:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2A7 text19 CODE >29:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+29A text18 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+29A text18 CODE >22:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2A0 text18 CODE >23:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+293 text17 CODE >30:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+293 text17 CODE >31:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+299 text17 CODE >32:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+28C text16 CODE >24:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+28C text16 CODE >25:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+292 text16 CODE >26:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B4 text15 CODE >12:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B5 text15 CODE >13:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B7 text15 CODE >14:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+E4 text14 CODE >4:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+E4 text14 CODE >5:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+E7 text14 CODE >6:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+ED text14 CODE >7:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+ED text14 CODE >8:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+EE text14 CODE >10:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+106 text14 CODE >11:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+107 text14 CODE >13:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+11F text14 CODE >14:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+120 text14 CODE >16:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+128 text14 CODE >17:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+133 text14 CODE >17:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+137 text14 CODE >17:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+13B text14 CODE >18:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+145 text14 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+14E text14 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+153 text14 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+156 text14 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+159 text14 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+15C text14 CODE >22:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+21C text13 CODE >24:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+21D text13 CODE >26:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+220 text13 CODE >27:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+222 text13 CODE >28:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+224 text13 CODE >30:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+226 text13 CODE >31:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+22D text13 CODE >31:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+234 text13 CODE >32:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+23A text13 CODE >32:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+23E text13 CODE >33:/home/tremon/MPLABXProjects/Lamp.X/ISR.c
+1F9 text12 CODE >17:/home/tremon/MPLABXProjects/Lamp.X/main.c
+1F9 text12 CODE >18:/home/tremon/MPLABXProjects/Lamp.X/main.c
+208 text12 CODE >19:/home/tremon/MPLABXProjects/Lamp.X/main.c
+211 text12 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/main.c
+23F text11 CODE >4:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+242 text11 CODE >6:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+243 text11 CODE >43:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+247 text11 CODE >44:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+24B text11 CODE >45:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+24D text11 CODE >46:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+24F text11 CODE >47:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+254 text11 CODE >50:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+255 text11 CODE >51:/opt/microchip/xc8/v2.40/pic/sources/c90/common/Umul8.c
+277 text10 CODE >10:/home/tremon/MPLABXProjects/Lamp.X/main.c
+277 text10 CODE >12:/home/tremon/MPLABXProjects/Lamp.X/main.c
+27D text10 CODE >13:/home/tremon/MPLABXProjects/Lamp.X/main.c
+281 text10 CODE >14:/home/tremon/MPLABXProjects/Lamp.X/main.c
+283 text10 CODE >15:/home/tremon/MPLABXProjects/Lamp.X/main.c
+1D6 text9 CODE >3:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1D6 text9 CODE >5:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1D9 text9 CODE >6:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1DA text9 CODE >7:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1DB text9 CODE >8:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1DE text9 CODE >9:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1DF text9 CODE >10:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1E0 text9 CODE >12:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1E3 text9 CODE >13:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1E4 text9 CODE >14:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1E7 text9 CODE >15:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1E8 text9 CODE >16:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1EC text9 CODE >17:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1EF text9 CODE >18:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1F2 text9 CODE >19:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1F5 text9 CODE >23:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1F6 text9 CODE >24:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1F7 text9 CODE >25:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+1F8 text9 CODE >27:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+256 text8 CODE >29:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+256 text8 CODE >30:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+259 text8 CODE >31:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+25A text8 CODE >32:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+25B text8 CODE >33:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+25D text8 CODE >34:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+25E text8 CODE >35:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+261 text8 CODE >36:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+264 text8 CODE >38:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+266 text8 CODE >39:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+268 text8 CODE >40:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+269 text8 CODE >41:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+26A text7 CODE >44:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+26A text7 CODE >45:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+26F text7 CODE >46:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+274 text7 CODE >48:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+275 text7 CODE >49:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+276 text7 CODE >50:/home/tremon/MPLABXProjects/Lamp.X/hardware.c
+2B8 text6 CODE >9:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B8 text6 CODE >10:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B9 text6 CODE >11:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2AE text5 CODE >12:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B1 text5 CODE >13:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2B3 text5 CODE >14:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2A8 text4 CODE >15:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2AB text4 CODE >16:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+2AD text4 CODE >17:/home/tremon/MPLABXProjects/Lamp.X/taskData.c
+186 text3 CODE >18:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+186 text3 CODE >19:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+18C text3 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+192 text3 CODE >21:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+196 text3 CODE >22:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+19C text3 CODE >23:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1A2 text3 CODE >25:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1A3 text3 CODE >26:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1A7 text3 CODE >27:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1AB text3 CODE >29:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1AE text3 CODE >30:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+15D text2 CODE >32:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+15D text2 CODE >33:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+163 text2 CODE >35:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+169 text2 CODE >35:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+16D text2 CODE >36:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+173 text2 CODE >37:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+179 text2 CODE >39:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+17A text2 CODE >40:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+17E text2 CODE >41:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+182 text2 CODE >43:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+185 text2 CODE >44:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1AF text1 CODE >4:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1AF text1 CODE >5:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1B3 text1 CODE >7:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1B9 text1 CODE >7:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1BD text1 CODE >8:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1C3 text1 CODE >9:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1C9 text1 CODE >11:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1CA text1 CODE >12:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1CE text1 CODE >13:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1D2 text1 CODE >15:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+1D5 text1 CODE >16:/home/tremon/MPLABXProjects/Lamp.X/tasks.c
+36 maintext CODE >23:/home/tremon/MPLABXProjects/Lamp.X/main.c
+36 maintext CODE >24:/home/tremon/MPLABXProjects/Lamp.X/main.c
+3B maintext CODE >29:/home/tremon/MPLABXProjects/Lamp.X/main.c
+5B maintext CODE >31:/home/tremon/MPLABXProjects/Lamp.X/main.c
+7E maintext CODE >32:/home/tremon/MPLABXProjects/Lamp.X/main.c
+A1 maintext CODE >44:/home/tremon/MPLABXProjects/Lamp.X/main.c
+A2 maintext CODE >45:/home/tremon/MPLABXProjects/Lamp.X/main.c
+B9 maintext CODE >45:/home/tremon/MPLABXProjects/Lamp.X/main.c
+BD maintext CODE >45:/home/tremon/MPLABXProjects/Lamp.X/main.c
+C1 maintext CODE >46:/home/tremon/MPLABXProjects/Lamp.X/main.c
+D4 maintext CODE >48:/home/tremon/MPLABXProjects/Lamp.X/main.c
+DC maintext CODE >48:/home/tremon/MPLABXProjects/Lamp.X/main.c
+284 clrtext CODE >1127:/tmp/xcXCICpdD.s
+284 clrtext CODE >1128:/tmp/xcXCICpdD.s
+285 clrtext CODE >1129:/tmp/xcXCICpdD.s
+285 clrtext CODE >1130:/tmp/xcXCICpdD.s
+286 clrtext CODE >1131:/tmp/xcXCICpdD.s
+287 clrtext CODE >1132:/tmp/xcXCICpdD.s
+288 clrtext CODE >1133:/tmp/xcXCICpdD.s
+289 clrtext CODE >1134:/tmp/xcXCICpdD.s
+28A clrtext CODE >1135:/tmp/xcXCICpdD.s
+28B clrtext CODE >1136:/tmp/xcXCICpdD.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__Hspace_0 2BD 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 6C 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_T1CONbits 10 0 ABS 0 - dist/default/production/Lamp.X.production.o
+main@i 5C 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__Hstrings 6C 0 ABS 0 strings -
+_TMR0 1 0 ABS 0 - dist/default/production/Lamp.X.production.o
+___sp 6C 0 STACK 2 stack /tmp/xcXepBDDg.o
+_main 6C 0 CODE 0 maintext dist/default/production/Lamp.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production/Lamp.X.production.o
+start 20 0 CODE 0 init /tmp/xcXepBDDg.o
+__pfunctab 4E 0 ENTRY 0 functab dist/default/production/Lamp.X.production.o
+taskData_set_Humidity@value 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__HbssCOMMON 6C 0 ABS 0 bssCOMMON -
+_OPTION_REGbits 81 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__end_of_taskData_set_ADC_CurrentTask 55C 0 CODE 0 text4 dist/default/production/Lamp.X.production.o
+__end_of_taskData_get_MaxNoise 550 0 CODE 0 text19 dist/default/production/Lamp.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+create_task@ticks_period 4E 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__HdataCOMMON 6C 0 ABS 0 dataCOMMON -
+taskData_setADC_ready@value 4E 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+intlevel0 4E 0 ENTRY 0 functab /tmp/xcXepBDDg.o
+intlevel1 4E 0 ENTRY 0 functab /tmp/xcXepBDDg.o
+intlevel2 4E 0 ENTRY 0 functab /tmp/xcXepBDDg.o
+intlevel3 4E 0 ENTRY 0 functab /tmp/xcXepBDDg.o
+intlevel4 4E 0 ENTRY 0 functab /tmp/xcXepBDDg.o
+intlevel5 4E 0 ENTRY 0 functab /tmp/xcXepBDDg.o
+__LbssCOMMON 6C 0 ABS 0 bssCOMMON -
+__end_of_readHumidity 3AC 0 CODE 0 text1 dist/default/production/Lamp.X.production.o
+_taskData_get_MaxNoise 542 0 CODE 0 text19 dist/default/production/Lamp.X.production.o
+___bmul@multiplicand 4E 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__Hfunctab 6C 0 ENTRY 0 functab -
+__Hclrtext 6C 0 ABS 0 clrtext -
+__pidataCOMMON 578 0 CODE 0 idataCOMMON dist/default/production/Lamp.X.production.o
+i1taskData_setADC_ready@value 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__end_of_taskData_setADC_ready 568 0 CODE 0 text5 dist/default/production/Lamp.X.production.o
+__end_of_readTemperature 35E 0 CODE 0 text3 dist/default/production/Lamp.X.production.o
+_create_task 4EE 0 CODE 0 text10 dist/default/production/Lamp.X.production.o
+_ADRESH 1E 0 ABS 0 - dist/default/production/Lamp.X.production.o
+_ADRESL 9E 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__LdataCOMMON 6C 0 ABS 0 dataCOMMON -
+__end_of___bmul 4AC 0 CODE 0 text11 dist/default/production/Lamp.X.production.o
+_taskData_setADC_ready 55C 0 CODE 0 text5 dist/default/production/Lamp.X.production.o
+__Lmaintext 6C 0 ABS 0 maintext -
+___bmul@multiplier 51 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__end_of_ISR_periodic_interrupt 47E 0 CODE 0 text13 dist/default/production/Lamp.X.production.o
+___stackhi 0 0 ABS 0 - /tmp/xcXepBDDg.o
+___stacklo 0 0 ABS 0 - /tmp/xcXepBDDg.o
+__end_of_ISR_ADC_lecture_ready 2BA 0 CODE 0 text14 dist/default/production/Lamp.X.production.o
+__LidataCOMMON 6C 0 ABS 0 idataCOMMON -
+?_taskData_get_MaxNoise 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+taskData_set_MaxNoise@value 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+_readTemperature 30C 0 CODE 0 text3 dist/default/production/Lamp.X.production.o
+start_initialization 26 0 CODE 0 cinit dist/default/production/Lamp.X.production.o
+_ISR_ADC_lecture_ready 1C8 0 CODE 0 text14 dist/default/production/Lamp.X.production.o
+_TRISAbits 85 0 ABS 0 - dist/default/production/Lamp.X.production.o
+_humidity 24 0 BANK0 1 bssBANK0 dist/default/production/Lamp.X.production.o
+clear_ram0 508 0 CODE 0 clrtext dist/default/production/Lamp.X.production.o
+__pcstackBANK0 4E 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+taskData_set_Temperature@value 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__end_of_taskData_set_MaxNoise 534 0 CODE 0 text17 dist/default/production/Lamp.X.production.o
+_initHardware 4D4 0 CODE 0 text7 dist/default/production/Lamp.X.production.o
+ISR_periodic_interrupt@task_amount 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+___int_sp 6C 0 STACK 2 stack /tmp/xcXepBDDg.o
+__Hbank0 6C 0 ABS 0 bank0 -
+__Hbank1 6C 0 ABS 0 bank1 -
+__Hbank2 6C 0 ABS 0 bank2 -
+__Hbank3 6C 0 ABS 0 bank3 -
+__Hcinit 4E 0 CODE 0 cinit -
+__Hidloc 4008 0 IDLOC 5 idloc -
+__Hstack 6C 0 STACK 2 stack -
+__Hmaintext 6C 0 ABS 0 maintext -
+__Hcommon 6C 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 4 config -
+_taskData_set_MaxNoise 526 0 CODE 0 text17 dist/default/production/Lamp.X.production.o
+ISR_periodic_interrupt@i 73 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__Lbank0 6C 0 ABS 0 bank0 -
+__Lbank1 6C 0 ABS 0 bank1 -
+__Lbank2 6C 0 ABS 0 bank2 -
+__Lbank3 6C 0 ABS 0 bank3 -
+__Lcinit 26 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+__Lstack 6C 0 STACK 2 stack -
+__size_of__fptable 0 0 ABS 0 - dist/default/production/Lamp.X.production.o
+_INTCONbits B 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__Habs1 6C 0 ABS 0 abs1 -
+__Hcode 6C 0 ABS 0 code -
+__Hinit 20 0 CODE 0 init -
+__Hsfr0 6C 0 ABS 0 sfr0 -
+__Hsfr1 6C 0 ABS 0 sfr1 -
+__Hsfr2 6C 0 ABS 0 sfr2 -
+__Hsfr3 6C 0 ABS 0 sfr3 -
+__Htext 6C 0 ABS 0 text -
+_MAIN_ISR 3F2 0 CODE 0 text12 dist/default/production/Lamp.X.production.o
+__Labs1 6C 0 ABS 0 abs1 -
+__Lcode 6C 0 ABS 0 code -
+__Linit 20 0 CODE 0 init -
+__Lsfr0 6C 0 ABS 0 sfr0 -
+__Lsfr1 6C 0 ABS 0 sfr1 -
+__Lsfr2 6C 0 ABS 0 sfr2 -
+__Lsfr3 6C 0 ABS 0 sfr3 -
+__Ltext 6C 0 ABS 0 text -
+___bmul 47E 0 CODE 0 text11 dist/default/production/Lamp.X.production.o
+i1_taskData_setADC_ready 568 0 CODE 0 text15 dist/default/production/Lamp.X.production.o
+__LcstackBANK0 6C 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 6C 0 ABS 0 cstackCOMMON -
+_taskData_get_ADC_CurrentTask 574 0 CODE 0 text20 dist/default/production/Lamp.X.production.o
+__S0 2BD 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__end_ofi1_taskData_setADC_ready 570 0 CODE 0 text15 dist/default/production/Lamp.X.production.o
+__end_of_MAIN_ISR 438 0 CODE 0 text12 dist/default/production/Lamp.X.production.o
+saved_w 7E 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__HidataCOMMON 6C 0 ABS 0 idataCOMMON -
+_initTIMER1module 4AC 0 CODE 0 text8 dist/default/production/Lamp.X.production.o
+_taskData_set_Temperature 518 0 CODE 0 text16 dist/default/production/Lamp.X.production.o
+create_task@run 50 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__end_of_initHardware 4EE 0 CODE 0 text7 dist/default/production/Lamp.X.production.o
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXepBDDg.o
+__fptable 4E 0 ENTRY 0 functab dist/default/production/Lamp.X.production.o
+_task_array 26 0 BANK0 1 bssBANK0 dist/default/production/Lamp.X.production.o
+__LbssBANK0 6C 0 ABS 0 bssBANK0 -
+__end_of_create_task 508 0 CODE 0 text10 dist/default/production/Lamp.X.production.o
+_PIE1bits 8C 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__end_of__fptable 6C 0 ENTRY 0 functab dist/default/production/Lamp.X.production.o
+ISR_ADC_lecture_ready@lecture 76 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__ptext10 4EE 0 CODE 0 text10 dist/default/production/Lamp.X.production.o
+__ptext11 47E 0 CODE 0 text11 dist/default/production/Lamp.X.production.o
+__ptext12 3F2 0 CODE 0 text12 dist/default/production/Lamp.X.production.o
+__ptext13 438 0 CODE 0 text13 dist/default/production/Lamp.X.production.o
+__ptext14 1C8 0 CODE 0 text14 dist/default/production/Lamp.X.production.o
+__ptext15 568 0 CODE 0 text15 dist/default/production/Lamp.X.production.o
+__ptext16 518 0 CODE 0 text16 dist/default/production/Lamp.X.production.o
+__ptext17 526 0 CODE 0 text17 dist/default/production/Lamp.X.production.o
+__ptext18 534 0 CODE 0 text18 dist/default/production/Lamp.X.production.o
+__ptext19 542 0 CODE 0 text19 dist/default/production/Lamp.X.production.o
+__ptext20 574 0 CODE 0 text20 dist/default/production/Lamp.X.production.o
+__pmaintext 6C 0 CODE 0 maintext dist/default/production/Lamp.X.production.o
+__Lcommon 6C 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+_initADCmodule 3AC 0 CODE 0 text9 dist/default/production/Lamp.X.production.o
+_adc_current_task 7C 0 COMMON 1 bssCOMMON dist/default/production/Lamp.X.production.o
+_ADCON0bits 1F 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__end_of_taskData_set_Humidity 542 0 CODE 0 text18 dist/default/production/Lamp.X.production.o
+_ADCON1bits 9F 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__pbssCOMMON 7C 0 COMMON 1 bssCOMMON dist/default/production/Lamp.X.production.o
+__end_of_initTIMER1module 4D4 0 CODE 0 text8 dist/default/production/Lamp.X.production.o
+__HcstackBANK0 6C 0 ABS 0 cstackBANK0 -
+_PIR1bits C 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__Lend_init 20 0 CODE 0 end_init -
+__LcstackCOMMON 6C 0 ABS 0 cstackCOMMON -
+end_of_initialization 46 0 CODE 0 cinit dist/default/production/Lamp.X.production.o
+__Hintentry 20 0 CODE 0 intentry -
+fptable 4E 0 ENTRY 0 functab dist/default/production/Lamp.X.production.o
+fptotal 6 0 ABS 0 - dist/default/production/Lamp.X.production.o
+_taskData_set_Humidity 534 0 CODE 0 text18 dist/default/production/Lamp.X.production.o
+__Lstrings 6C 0 ABS 0 strings -
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__HbssBANK0 6C 0 ABS 0 bssBANK0 -
+_taskData_set_ADC_CurrentTask 550 0 CODE 0 text4 dist/default/production/Lamp.X.production.o
+__ptext1 35E 0 CODE 0 text1 dist/default/production/Lamp.X.production.o
+__ptext2 2BA 0 CODE 0 text2 dist/default/production/Lamp.X.production.o
+__ptext3 30C 0 CODE 0 text3 dist/default/production/Lamp.X.production.o
+__ptext4 550 0 CODE 0 text4 dist/default/production/Lamp.X.production.o
+__ptext5 55C 0 CODE 0 text5 dist/default/production/Lamp.X.production.o
+__ptext6 570 0 CODE 0 text6 dist/default/production/Lamp.X.production.o
+__ptext7 4D4 0 CODE 0 text7 dist/default/production/Lamp.X.production.o
+__ptext8 4AC 0 CODE 0 text8 dist/default/production/Lamp.X.production.o
+__ptext9 3AC 0 CODE 0 text9 dist/default/production/Lamp.X.production.o
+__end_of_taskData_get_ADC_CurrentTask 578 0 CODE 0 text20 dist/default/production/Lamp.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+ISR_periodic_interrupt@task_array 72 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_adc_ready 7D 0 COMMON 1 dataCOMMON dist/default/production/Lamp.X.production.o
+_max_noise 20 0 BANK0 1 bssBANK0 dist/default/production/Lamp.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of_readNoise 30C 0 CODE 0 text2 dist/default/production/Lamp.X.production.o
+__end_of__initialization 46 0 CODE 0 cinit dist/default/production/Lamp.X.production.o
+__Lfunctab 4E 0 ENTRY 0 functab -
+__Lclrtext 6C 0 ABS 0 clrtext -
+_ANSELbits 188 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/Lamp.X.production.o
+__end_of_taskData_getADC_ready 574 0 CODE 0 text6 dist/default/production/Lamp.X.production.o
+_readNoise 2BA 0 CODE 0 text2 dist/default/production/Lamp.X.production.o
+taskData_set_ADC_CurrentTask@value 4E 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__Hend_init 26 0 CODE 0 end_init -
+__end_of_main 1C8 0 CODE 0 maintext dist/default/production/Lamp.X.production.o
+_TMR1H F 0 ABS 0 - dist/default/production/Lamp.X.production.o
+_TMR1L E 0 ABS 0 - dist/default/production/Lamp.X.production.o
+__Hram 6C 0 ABS 0 ram -
+__Lram 6C 0 ABS 0 ram -
+interrupt_function 8 0 CODE 0 intentry dist/default/production/Lamp.X.production.o
+_temperature 22 0 BANK0 1 bssBANK0 dist/default/production/Lamp.X.production.o
+__end_of_initADCmodule 3F2 0 CODE 0 text9 dist/default/production/Lamp.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/production/Lamp.X.production.o
+_taskData_getADC_ready 570 0 CODE 0 text6 dist/default/production/Lamp.X.production.o
+__end_of_taskData_set_Temperature 526 0 CODE 0 text16 dist/default/production/Lamp.X.production.o
+create_task@to_create 53 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__initialization 26 0 CODE 0 cinit dist/default/production/Lamp.X.production.o
+___bmul@product 50 0 BANK0 1 cstackBANK0 dist/default/production/Lamp.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production/Lamp.X.production.o
+__pdataCOMMON 7D 0 COMMON 1 dataCOMMON dist/default/production/Lamp.X.production.o
+_ISR_periodic_interrupt 438 0 CODE 0 text13 dist/default/production/Lamp.X.production.o
+_readHumidity 35E 0 CODE 0 text1 dist/default/production/Lamp.X.production.o
+fpbase 58 0 ENTRY 0 functab dist/default/production/Lamp.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+maintext 0 36 6C 287 2
+cstackCOMMON 1 70 70 E 1
+intentry 0 4 8 23 2
+reset_vec 0 0 0 3 2
+bssBANK0 1 20 20 3D 1
+functab 0 27 4E F 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
