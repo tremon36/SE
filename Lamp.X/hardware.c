@@ -41,6 +41,29 @@ void initTIMER1module(void){
 }
 
 
+void init_TIMER2module(void) {
+    PR2 = 166;
+    T2CONbits.T2CKPS = 0b00;
+    PIE1bits.TMR2IE = 0;
+    PIR1bits.TMR2IF = 0;
+    T2CONbits.TMR2ON = 1;
+
+}
+
+void init_PWMmodule(void) {
+    TRISCbits.TRISC1 = 1;
+    TRISCbits.TRISC2 = 1;
+ 
+    CCP2CONbits.CCP2M = 0b1100;
+    
+    CCPR2L = 0;
+    init_TIMER2module();
+    while(!PIR1bits.TMR2IF);
+    TRISCbits.TRISC1 = 0;
+    TRISCbits.TRISC2 = 0;
+    
+}
+
 void initHardware(void) {
     initADCmodule();
     initTIMER1module();
