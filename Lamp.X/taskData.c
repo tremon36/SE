@@ -5,6 +5,7 @@ char adc_current_task = 0;
 int humidity = 0;
 int temperature = 0;
 int max_noise = 0;
+int duty = 0;
 
 char taskData_getADC_ready(void){
     return adc_ready;
@@ -29,4 +30,10 @@ int taskData_get_MaxNoise(void){
 }
 void taskData_set_MaxNoise(int value){
     max_noise = value;
+}
+void taskData_get_DutyPWM(void){
+    return duty;
+}
+void taskData_set_DutyPWM(int value){
+    duty = value;
 }
