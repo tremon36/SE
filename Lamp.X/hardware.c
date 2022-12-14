@@ -41,7 +41,7 @@ void initTIMER1module(void){
 }
 
 
-void init_TIMER2module(void) {
+void initTIMER2module(void) {
     PR2 = 166;
     T2CONbits.T2CKPS = 0b00;
     PIE1bits.TMR2IE = 0;
@@ -50,7 +50,7 @@ void init_TIMER2module(void) {
 
 }
 
-void init_PWMmodule(void) {
+void initPWMmodule(void) {
     TRISCbits.TRISC1 = 1;
     TRISCbits.TRISC2 = 1;
  
@@ -62,6 +62,11 @@ void init_PWMmodule(void) {
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
     
+}
+
+void initSPImodule(void){
+	TRISC5bits.RC5 = 1;
+	TRISC0bits.RC0 = 1;
 }
 
 void initUartModule(void){
@@ -82,7 +87,11 @@ void initUartModule(void){
 void initHardware(void) {
     initADCmodule();
     initTIMER1module();
+    initTIMER2module();
+    initPWMmodule();
+    initSPImodule();
     initUartModule();
+    
     //@TODO add initialization methods from other members of the group
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
