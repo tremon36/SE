@@ -65,9 +65,9 @@ void init_PWMmodule(void) {
 }
 
 void initUartModule(void){
-  TXSTAbits.BRGH = 1;
+  TXSTAbits.BRGH = 0;
   BAUDCTLbits.BRG16 = 0;
-  SPBRG = 129; 
+  SPBRG = 32; 
   TXSTAbits.SYNC = 0; /* Asynchronous */
   TXSTAbits.TX9 = 0; /* TX 8 data bit */
   RCSTAbits.RX9 = 0; /* RX 8 data bit */
