@@ -1,5 +1,6 @@
 #include <xc.h>
 #include "taskData.h"
+#include "spi-master-v1.h"
 
 void readHumidity(void){
     ADCON0bits.CHS = 0b0000; // ADC channel = HumiditySensor @TODO
@@ -45,6 +46,10 @@ void readNoise(void){
 
 void setPWMDuty(void){
 	taskData_set_DutyPWM((taskData_get_DutyPWM()*PR2)/100);
+}
+
+void setLedsValue(){
+	taskData_set_LedsValue(spi_write_read(taskData_get_LedsValue()));
 }
 
 void sendUsartData(void){
@@ -109,31 +114,4 @@ void sendUsartData(void){
     while(!TRMT);
     TRMT=0;
     TXREG= (char)(0x0000FF & (taskData_get_DutyPWM() >> 24));
-}
-
-char spi_write_read(char one_byte){
-    char x;
-    char answer, x;
-    
-    answer = 0;
-    
-    for(x = 8; x > 0; x--){
-        spi_dat_out = (__bit)((one_byte >> (x - 1)) & 0b00000001);
-		
-        //__delay_us(5);
-        spi_clk = 1;
-		
-        //__delay_us(10);
-        answer |= (char)spi_dat_in;
-        spi_clk = 0;
-		
-        //__delay_us(10);
-        if(x > 1)
-            answer = answer << 1;
-    }
-    return answer;
-}
-
-void setLedsValue(){
-	taskData_set_LedsValue(spi_write_read(taskData_get_LedsValue()));
 }
