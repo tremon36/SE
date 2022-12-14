@@ -47,7 +47,69 @@ void setPWMDuty(void){
 	taskData_set_DutyPWM((taskData_get_DutyPWM()*PR2)/100);
 }
 
+void sendUsartData(void){
 
+ //Humidity Temperature max_noise Duty
+ 
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_Humidity()));
+    while(!TRMT);
+    TRMT=0;
+    TXREG=(char)(0x0000FF & (taskData_get_Humidity() >> 8));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_Humidity() >> 16));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_Humidity() >> 24));
+
+    //Send Temperature Data
+
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_Temperature()));
+    while(!TRMT);
+    TRMT=0;
+    TXREG=(char)(0x0000FF & (taskData_get_Temperature() >> 8));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_Temperature() >> 16));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_Temperature() >> 24));
+
+    //Send MaxNoise Data
+
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_MaxNoise()));
+    while(!TRMT);
+    TRMT=0;
+    TXREG=(char)(0x0000FF & (taskData_get_MaxNoise() >> 8));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_MaxNoise() >> 16));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_MaxNoise() >> 24));
+    taskData_set_MaxNoise(0);
+
+    //Send Duty
+
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_DutyPWM()));
+    while(!TRMT);
+    TRMT=0;
+    TXREG=(char)(0x0000FF & (taskData_get_DutyPWM() >> 8));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_DutyPWM() >> 16));
+    while(!TRMT);
+    TRMT=0;
+    TXREG= (char)(0x0000FF & (taskData_get_DutyPWM() >> 24));
+}
 
 char spi_write_read(char one_byte){
     char x;
@@ -71,3 +133,4 @@ char spi_write_read(char one_byte){
     }
     return answer;
 }
+

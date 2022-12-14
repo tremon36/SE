@@ -64,15 +64,6 @@ void init_PWMmodule(void) {
     
 }
 
-void initHardware(void) {
-    initADCmodule();
-    initTIMER1module();
-    initUartModule();
-    //@TODO add initialization methods from other members of the group
-    INTCONbits.PEIE = 1;
-    INTCONbits.GIE = 1;
-}
-
 void initUartModule(void){
   TXSTAbits.BRGH = 1;
   BAUDCTLbits.BRG16 = 0;
@@ -87,3 +78,13 @@ void initUartModule(void){
   TXSTAbits.TXEN = 1; /* Enable transmitter */
   TXREG = 0;
 }
+
+void initHardware(void) {
+    initADCmodule();
+    initTIMER1module();
+    initUartModule();
+    //@TODO add initialization methods from other members of the group
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
+}
+

@@ -37,3 +37,12 @@ void taskData_get_DutyPWM(void){
 void taskData_set_DutyPWM(int value){
     duty = value;
 }
+int taskData_get_Temperature(void){
+    return temperature;
+}
+
+int taskData_get_Humidity(void){
+    return humidity;
+}
+
+

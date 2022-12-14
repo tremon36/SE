@@ -3,4 +3,5 @@
 void readHumidity(void);
 void readTemperature(void);
 void readNoise(void);
+void sendUsartData(void);
 #endif

@@ -15,6 +15,8 @@ void taskData_set_Humidity(int value);
 void taskData_set_Temperature(int value);
 int taskData_get_MaxNoise(void);
 void taskData_set_MaxNoise(int value);
+int taskData_get_Temperature(void);
+int taskData_get_Humidity(void);
 
 #endif	
 
