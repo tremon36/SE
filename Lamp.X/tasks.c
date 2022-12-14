@@ -47,6 +47,8 @@ void setPWMDuty(void){
 	taskData_set_DutyPWM((taskData_get_DutyPWM()*PR2)/100);
 }
 
+
+
 char spi_write_read(char one_byte){
     char x;
     char answer, x;

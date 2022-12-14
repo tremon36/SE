@@ -67,7 +67,23 @@ void init_PWMmodule(void) {
 void initHardware(void) {
     initADCmodule();
     initTIMER1module();
+    initUartModule();
     //@TODO add initialization methods from other members of the group
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
+}
+
+void initUartModule(void){
+  TXSTAbits.BRGH = 1;
+  BAUDCTLbits.BRG16 = 0;
+  SPBRG = 129; 
+  TXSTAbits.SYNC = 0; /* Asynchronous */
+  TXSTAbits.TX9 = 0; /* TX 8 data bit */
+  RCSTAbits.RX9 = 0; /* RX 8 data bit */
+  PIE1bits.TXIE = 0; /* Disable TX interrupt */
+  PIE1bits.RCIE = 0; /* Disable RX interrupt */
+  RCSTAbits.SPEN = 1; /* Serial port enable */
+  TXSTAbits.TXEN = 0; /* Reset transmitter */
+  TXSTAbits.TXEN = 1; /* Enable transmitter */
+  TXREG = 0;
 }
