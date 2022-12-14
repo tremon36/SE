@@ -6,6 +6,7 @@ int humidity = 0;
 int temperature = 0;
 int max_noise = 0;
 int duty = 0;
+char leds = 0;
 
 char taskData_getADC_ready(void){
     return adc_ready;
@@ -34,15 +35,19 @@ void taskData_set_MaxNoise(int value){
 void taskData_get_DutyPWM(void){
     return duty;
 }
-void taskData_set_DutyPWM(int value){
+int taskData_set_DutyPWM(int value){
     duty = value;
 }
 int taskData_get_Temperature(void){
     return temperature;
 }
-
 int taskData_get_Humidity(void){
     return humidity;
 }
-
+void taskData_get_LedsValue(){
+    return leds;
+}
+char taskData_set_LedsValue(char value){
+    leds = value;
+}
 
