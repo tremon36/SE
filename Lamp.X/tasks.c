@@ -134,3 +134,6 @@ char spi_write_read(char one_byte){
     return answer;
 }
 
+void setLedsValue(){
+	taskData_set_LedsValue(spi_write_read(taskData_get_LedsValue()));
+}
