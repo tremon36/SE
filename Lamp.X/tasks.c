@@ -62,12 +62,7 @@ void sendUsartData(void){
     while(!TRMT);
     TRMT=0;
     TXREG=(char)(0x0000FF & (taskData_get_Humidity() >> 8));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_Humidity() >> 16));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_Humidity() >> 24));
+    
 
     //Send Temperature Data
 
@@ -77,13 +72,7 @@ void sendUsartData(void){
     while(!TRMT);
     TRMT=0;
     TXREG=(char)(0x0000FF & (taskData_get_Temperature() >> 8));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_Temperature() >> 16));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_Temperature() >> 24));
-
+   
     //Send MaxNoise Data
 
     while(!TRMT);
@@ -92,12 +81,7 @@ void sendUsartData(void){
     while(!TRMT);
     TRMT=0;
     TXREG=(char)(0x0000FF & (taskData_get_MaxNoise() >> 8));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_MaxNoise() >> 16));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_MaxNoise() >> 24));
+   
     taskData_set_MaxNoise(0);
 
     //Send Duty
@@ -108,10 +92,5 @@ void sendUsartData(void){
     while(!TRMT);
     TRMT=0;
     TXREG=(char)(0x0000FF & (taskData_get_DutyPWM() >> 8));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_DutyPWM() >> 16));
-    while(!TRMT);
-    TRMT=0;
-    TXREG= (char)(0x0000FF & (taskData_get_DutyPWM() >> 24));
+   
 }
